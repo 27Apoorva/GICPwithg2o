@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11  -Wno-deprecated -std=c++11  -Wall -W -O2 -g -DNDEBUG   -shared -Wl,-soname,libg2o_solver_eigen.so -o ../../../../../g2o/lib/libg2o_solver_eigen.so CMakeFiles/solver_eigen.dir/solver_eigen.cpp.o -Wl,-rpath,/home/appu/g2o_coding_sample/g2o/lib: ../../../../../g2o/lib/libg2o_core.so ../../../../../g2o/lib/libg2o_stuff.so -lrt 

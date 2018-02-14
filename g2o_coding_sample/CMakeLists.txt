@@ -1,0 +1,35 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+INCLUDE(ExternalProject)
+INCLUDE(CMakeDependentOption)
+
+PROJECT(g2o_coding_sample)
+
+add_compile_options(-msse4.2)
+add_compile_options(-O3)
+
+# we set -std=c++11 just in the CXX_FLAGS (might not work in catkin packages that do not mention CMAKE_CXX_FLAGS)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIRS})
+
+FIND_PACKAGE(PCL 1.7 REQUIRED)
+INCLUDE_DIRECTORIES(SYSTEM ${PCL_INCLUDE_DIRS})
+LINK_DIRECTORIES(${PCL_LIBRARY_DIRS})
+ADD_DEFINITIONS(${PCL_DEFINITIONS})
+
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
+
+SET(g2o_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/g2o/)
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/g2o/cmake_modules)
+ADD_SUBDIRECTORY(g2o)
+
+SET(G2O_SOLVER_CSPARSE solver_csparse)
+SET(G2O_STUFF_LIBRARY stuff)
+SET(G2O_CORE_LIBRARY core)
+SET(G2O_TYPES_SLAM3D types_slam3d)
+SET(G2O_TYPES_ICP types_icp)
+SET(G2O_SOLVER_CSPARSE_EXTENSION csparse_extension)
+
+ADD_SUBDIRECTORY(src)
+

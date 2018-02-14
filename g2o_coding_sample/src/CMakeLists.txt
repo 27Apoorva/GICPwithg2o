@@ -1,0 +1,14 @@
+
+INCLUDE_DIRECTORIES( ${G2O_INCLUDE_DIR} ${CSPARSE_INCLUDE_DIR})
+
+SET(G2O_LIBRARIES ${G2O_CORE_LIBRARY} ${G2O_TYPES_SLAM3D} ${G2O_TYPES_ICP} ${G2O_SOLVER_CSPARSE}
+                         ${G2O_SOLVER_CSPARSE_EXTENSION} ${G2O_STUFF_LIBRARY} ${CSPARSE_LIBRARY})
+
+
+ADD_EXECUTABLE(test_gicp
+  test_gicp.cpp
+)
+
+TARGET_LINK_LIBRARIES(test_gicp ${G2O_LIBRARIES} ${PCL_LIBRARIES} ${Boost_LIBRARIES})
+                                
+add_dependencies(test_gicp types_icp)
