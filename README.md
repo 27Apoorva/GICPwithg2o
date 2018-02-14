@@ -1,4 +1,4 @@
-# GICPwithg2o
+# GICP with g2o
 # see instructions on http://pointclouds.org/downloads/linux.html to get PCL
 
 # install dependent libraries on ubuntu (14.04)
