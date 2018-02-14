@@ -1,4 +1,4 @@
-# Install script for directory: /home/appu/g2o_coding_sample/src
+# Install script for directory: /home/appu/GICPwithg2o/g2o_coding_sample/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

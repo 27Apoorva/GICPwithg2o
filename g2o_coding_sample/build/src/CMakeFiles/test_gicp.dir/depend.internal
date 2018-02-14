@@ -73,7 +73,7 @@ src/CMakeFiles/test_gicp.dir/test_gicp.cpp.o
  ../g2o/g2o/types/slam3d/types_slam3d.h
  ../g2o/g2o/types/slam3d/vertex_pointxyz.h
  ../g2o/g2o/types/slam3d/vertex_se3.h
- /home/appu/g2o_coding_sample/src/test_gicp.cpp
+ /home/appu/GICPwithg2o/g2o_coding_sample/src/test_gicp.cpp
  /usr/include/pcl-1.7/pcl/PCLHeader.h
  /usr/include/pcl-1.7/pcl/PCLImage.h
  /usr/include/pcl-1.7/pcl/PCLPointCloud2.h
